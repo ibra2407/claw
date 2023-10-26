@@ -1,0 +1,14 @@
+.confetti {
+    position: fixed;
+    top: -10%;
+    /* Adjust the top position as needed */
+    left: -100%;
+    /* Adjust the left position as needed */
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.confetti.show {
+    opacity: 1;
+}

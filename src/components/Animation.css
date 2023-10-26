@@ -1,0 +1,40 @@
+.game-container {
+    background-color: rgba(0, 0, 0, 0.469);
+    /* Set the background color to black */
+    width: 100%;
+    /* Set the width of the container */
+    height: 300px;
+    /* Set the height of the container */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding: 0px;
+    /* Add some padding inside the container */
+    /* border-radius: 10px; */
+    /* Optional: Add border-radius for rounded corners */
+    color: white;
+    /* Set text color to white */
+    position: relative;
+    /* Ensure .game-object is positioned relative to this container */
+}
+
+.animation-container {
+    position: relative;
+}
+
+.claw {
+    position: absolute;
+}
+
+.grid-cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+}
+
+.grid-row {
+    display: flex;
+}
+
+.green-box {
+    background-color: green;
+}
