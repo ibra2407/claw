@@ -73,9 +73,7 @@ export const Animation = () => {
     if(!gameCompleted){
       document.addEventListener('keydown', handleKeyDown);
     }
-    else {
-      document.removeEventListener('keydown', handleKeyDown);
-    }
+    
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
