@@ -125,8 +125,8 @@ const DialogBoxContent = ({ message }) => {
   );
 };
 
-export const DialogBox = ({ message, onClose }) => {
-  return <DialogBoxContent message={message} onClose={onClose}/>; // Pass UniqueID prop to DialogBoxContent
+export const DialogBox = ({ message }) => {
+  return <DialogBoxContent message={message} />; // Pass UniqueID prop to DialogBoxContent
 };
 
 export default DialogBox;
