@@ -101,24 +101,25 @@ const DialogBoxContent = ({ message }) => {
             <div className="superhero-details">
               <img src={randomSuperhero.image} alt={randomSuperhero.name} />
               <p>{randomSuperhero.name}</p>
+        
+      </div>
+    </div>
+    <div className="email-form-container">
         <div className="button-container">
           {retryCount > 0 && (
             <button className="try-again-button" onClick={handleTryAgain}>
               Try Again ({retryCount} {retryCount === 1 ? 'try' : 'tries'} left)
-            </button>
-          )}
+            </button>)}
         </div>
-      </div>
-    </div>
-  <div className="email-form-container">
-    <EmailForm
+        <hr></hr>
+      <EmailForm
       UniqueID={UniqueID}
       superheroName={randomSuperhero.name}
       onEmailSent={handleEmailSent}
       alreadySent={emailSent}
-    />
-  </div>
-  </div>
+      />
+      </div>
+    </div>
   </div>
     </>
   );

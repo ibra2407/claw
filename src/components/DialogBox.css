@@ -79,6 +79,7 @@
     /* Add pointer cursor on hover */
     transition: background-color 0.2s;
     /* Add smooth background color transition */
+    margin-left: 10px;
 }
 
 .try-again-button:hover {
@@ -109,14 +110,4 @@
 .button-container {
     display: flex;
     align-items: center;
-}
-
-.try-again-button {
-    text-align: center;
-    margin-right: 10px;
-    /* Add space between "Try Again" button and counter */
-}
-
-.superhero-details {
-    text-align: center;
 }
