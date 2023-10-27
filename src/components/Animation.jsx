@@ -70,12 +70,16 @@ export const Animation = () => {
   };
 
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-
+    if(!gameCompleted){
+      document.addEventListener('keydown', handleKeyDown);
+    }
+    else {
+      document.removeEventListener('keydown', handleKeyDown);
+    }
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [clawPosition]);
+  }, [clawPosition, gameCompleted]);
 
   const clawStyle = {
     left: `${clawPosition.x * clawVisualSize}px`,
