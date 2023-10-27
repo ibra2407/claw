@@ -52,10 +52,9 @@ const getRandomSuperhero = () => {
   };
 };
 
-const DialogBoxContent = ({ message }) => {
+const DialogBoxContent = ({ message, onRetryClick, retries }) => {
   const [emailSent, setEmailSent] = useState(false);
   const [UniqueID, setUniqueID] = useState('');
-  const [retryCount, setRetryCount] = useState(2);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -83,9 +82,8 @@ const DialogBoxContent = ({ message }) => {
   // Add this line to check the value of UniqueID
 
   const handleTryAgain = () => {
-    if (retryCount > 0) {
-      setRetryCount(retryCount - 1);
-      // Reset game state or perform other necessary actions for retry
+    if (retries > 0) {
+      onRetryClick(); // Call the provided retry click handler when retries are exhausted
     }
   };
 
@@ -106,9 +104,9 @@ const DialogBoxContent = ({ message }) => {
     </div>
     <div className="email-form-container">
         <div className="button-container">
-          {retryCount > 0 && (
+          {retries > 0 && (
             <button className="try-again-button" onClick={handleTryAgain}>
-              Try Again ({retryCount} {retryCount === 1 ? 'try' : 'tries'} left)
+              Try Again ({retries} {retries === 1 ? 'try' : 'tries'} left)
             </button>)}
         </div>
         <hr></hr>
@@ -125,8 +123,8 @@ const DialogBoxContent = ({ message }) => {
   );
 };
 
-export const DialogBox = ({ message }) => {
-  return <DialogBoxContent message={message} />; // Pass UniqueID prop to DialogBoxContent
+export const DialogBox = ({ message, onRetryClick, retries }) => {
+  return <DialogBoxContent message={message} onRetryClick={onRetryClick} retries={retries}/>; // Pass UniqueID prop to DialogBoxContent
 };
 
 export default DialogBox;

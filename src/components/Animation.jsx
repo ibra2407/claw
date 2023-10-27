@@ -6,6 +6,8 @@ export const Animation = () => {
   const containerRef = useRef(null);
   const [clawPosition, setClawPosition] = useState({ x: 0, y: 0 });
   const [gameCompleted, setGameCompleted] = useState(false);
+  const [retries, setRetries] = useState(2); // State to track the number of retries
+
   const [greenBoxes, setGreenBoxes] = useState([
     { x: 1, y: 9 },
     { x: 3, y: 9 },
@@ -101,12 +103,18 @@ export const Animation = () => {
     return rows;
   };
 
+  const handleRetryClick = () => {
+    setGameCompleted(false); // Reset game completion status
+    setClawPosition({ x: 0, y: 0 }); // Reset claw position to (0, 0)
+    setRetries(retries - 1); // Decrement the number of retries
+  };
+
 
   return (
     <div className="game-container" ref={containerRef}>
       {renderGrid()}
       <div className="claw" style={clawStyle}></div>
-      {gameCompleted && <DialogBox message="Your Superhero is..." />}
+      {gameCompleted && <DialogBox message="Your Superhero is..." onRetryClick={handleRetryClick} retries={retries}/>}
     </div>
   );
 };
