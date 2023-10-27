@@ -94,7 +94,6 @@ const DialogBoxContent = ({ message }) => {
         </div>
         <div className="button-container">
           <button>Try Again</button>
-          <button>Submit</button>
         </div>
         <div>
           <EmailForm
