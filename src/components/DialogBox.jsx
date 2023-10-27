@@ -55,6 +55,7 @@ const getRandomSuperhero = () => {
 const DialogBoxContent = ({ message }) => {
   const [emailSent, setEmailSent] = useState(false);
   const [UniqueID, setUniqueID] = useState('');
+  const [retryCount, setRetryCount] = useState(2);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -81,29 +82,44 @@ const DialogBoxContent = ({ message }) => {
   console.log("UniqueID in DialogBox component:", UniqueID);
   // Add this line to check the value of UniqueID
 
+  const handleTryAgain = () => {
+    if (retryCount > 0) {
+      setRetryCount(retryCount - 1);
+      // Reset game state or perform other necessary actions for retry
+    }
+  };
+
   const randomSuperhero = getRandomSuperhero();
 
   return (
     <>
-      <div className="dialog-box">
-        <ConfettiComponent />
-        <p>{message}</p>
-        <div className="superhero-details">
-          <img src={randomSuperhero.image} alt={randomSuperhero.name} />
-          <p>{randomSuperhero.name}</p>
-        </div>
+      <div>
+        <div className="dialog-box">
+          <ConfettiComponent />
+          <p>{message}</p>
+          <div className="content-container">
+            <div className="superhero-details">
+              <img src={randomSuperhero.image} alt={randomSuperhero.name} />
+              <p>{randomSuperhero.name}</p>
         <div className="button-container">
-          <button>Try Again</button>
+          {retryCount > 0 && (
+            <button className="try-again-button" onClick={handleTryAgain}>
+              Try Again ({retryCount} {retryCount === 1 ? 'try' : 'tries'} left)
+            </button>
+          )}
         </div>
-        <div>
-          <EmailForm
-            UniqueID={UniqueID}
-            superheroName={randomSuperhero.name}
-            onEmailSent={handleEmailSent}
-            alreadySent={emailSent} 
-          />
-        </div>
-      </div> 
+      </div>
+    </div>
+  <div className="email-form-container">
+    <EmailForm
+      UniqueID={UniqueID}
+      superheroName={randomSuperhero.name}
+      onEmailSent={handleEmailSent}
+      alreadySent={emailSent}
+    />
+  </div>
+  </div>
+  </div>
     </>
   );
 };

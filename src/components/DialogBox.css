@@ -16,3 +16,107 @@
     text-align: center;
     /* Center the text */
 }
+
+.emailForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.emailForm input {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    outline: none;
+    cursor: not-allowed;
+}
+
+.emailForm button {
+    padding: 5px;
+    font-size: 14px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.emailForm button:hover {
+    background-color: #f269f2;
+}
+
+.emailForm button:disabled {
+    background-color: #6f6e6e;
+    cursor: not-allowed;
+}
+
+.superhero-details img {
+    width: 400px;
+    /* Set the desired width */
+    height: 400px;
+    /* Set the desired height */
+}
+
+.try-again-button {
+    text-align: center;
+    padding: 5px;
+    /* Set padding for the button */
+    font-size: 14px;
+    /* Set font size for the button text */
+    background-color: #3eb8e5;
+    /* Set background color */
+    color: white;
+    /* Set text color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Set border radius */
+    cursor: pointer;
+    /* Add pointer cursor on hover */
+    transition: background-color 0.2s;
+    /* Add smooth background color transition */
+}
+
+.try-again-button:hover {
+    background-color: #f269f2;
+    /* Change background color on hover */
+}
+
+.dialog-box {
+    /* ... other styles ... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    width: 100%;
+    /* Make sure the content container takes the full width */
+    margin-bottom: 20px;
+    /* Add space between content container and email form */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.try-again-button {
+    text-align: center;
+    margin-right: 10px;
+    /* Add space between "Try Again" button and counter */
+}
+
+.superhero-details {
+    text-align: center;
+}
