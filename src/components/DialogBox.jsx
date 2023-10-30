@@ -55,6 +55,7 @@ const getRandomSuperhero = () => {
 const DialogBoxContent = ({ message, onRetryClick, retries }) => {
   const [emailSent, setEmailSent] = useState(false);
   const [UniqueID, setUniqueID] = useState('');
+  const [randomSuperhero, setRandomSuperhero] = useState(getRandomSuperhero());
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -86,8 +87,6 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
       onRetryClick(); // Call the provided retry click handler when retries are exhausted
     }
   };
-
-  const randomSuperhero = getRandomSuperhero();
 
   return (
     <>
