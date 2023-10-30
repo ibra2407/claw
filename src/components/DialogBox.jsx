@@ -88,6 +88,16 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
     }
   };
 
+  if (emailSent) {
+    return (
+      <div className="modal-overlay">
+        <div className="dialog-box">
+          <h1>Thanks for giving, Hero!</h1>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="modal-overlay">
