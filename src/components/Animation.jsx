@@ -6,6 +6,8 @@ export const Animation = () => {
   const containerRef = useRef(null);
   const [clawPosition, setClawPosition] = useState({ x: 0, y: 0 });
   const [gameCompleted, setGameCompleted] = useState(false);
+  const [isMovingDown, setIsMovingDown] = useState(false); // State to track downward movement
+  const [targetY, setTargetY] = useState(0); // New state variable to track target position for moving up
   const [retries, setRetries] = useState(2); // State to track the number of retries
 
   const [greenBoxes, setGreenBoxes] = useState([
@@ -49,6 +51,9 @@ export const Animation = () => {
     } else if (keyCode === 38 && newPosition.y > 0) {
       // Down Arrow: Move the claw down; key 38
       newPosition.y -= 1;
+    } else if (keyCode === 32 && !isMovingDown && clawPosition.y < 8) {
+      // Spacebar (keyCode 32) pressed and not already moving down and not at the bottom
+      setIsMovingDown(true); // Set the state to start moving down
     }
 
     // Check if the new position overlaps with any green box
@@ -70,6 +75,26 @@ export const Animation = () => {
     // Print the coordinates of the updated claw position
     console.log(`Current Claw Position: x=${newPosition.x}, y=${newPosition.y}`);
   };
+
+  // Effect to handle claw movement
+  useEffect(() => {
+    const moveDownInterval = setInterval(() => {
+      if (isMovingDown && clawPosition.y < 8) {
+        // Move down until y = 8 (one block above the bottom of the grid)
+        setClawPosition((prevPosition) => ({
+          ...prevPosition,
+          y: prevPosition.y + 1,
+        }));
+      } else {
+        setIsMovingDown(false); // Stop moving down
+        clearInterval(moveDownInterval); // Clear the interval
+      }
+    }, 100); // Adjust the interval for smoother animation (in milliseconds)
+
+    return () => {
+      clearInterval(moveDownInterval); // Clean up the interval on component unmount
+    };
+  }, [isMovingDown, clawPosition]);
 
   useEffect(() => {
     if(!gameCompleted){
