@@ -4,7 +4,7 @@ import DialogBox from './DialogBox';
 
 export const Animation = () => {
   const containerRef = useRef(null);
-  const [clawPosition, setClawPosition] = useState({ x: 0, y: 0 });
+  const [clawPosition, setClawPosition] = useState({ x: 0, y: 1 });
   const [gameCompleted, setGameCompleted] = useState(false);
   const [retries, setRetries] = useState(2); // State to track the number of retries
   const [isMoving, setIsMoving] = useState(false);
@@ -123,7 +123,7 @@ export const Animation = () => {
   // logic for retrying
   const handleRetryClick = () => {
     setGameCompleted(false); // Reset game completion status
-    setClawPosition({ x: 0, y: 0 }); // Reset claw position to (0, 0)
+    setClawPosition({ x: 0, y: 1 }); // Reset claw position to (0, 0)
     setRetries(retries - 1); // Decrement the number of retries
   };
 
