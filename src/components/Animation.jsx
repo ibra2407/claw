@@ -9,6 +9,7 @@ export const Animation = () => {
   const [isMovingDown, setIsMovingDown] = useState(false); // State to track downward movement
   const [retries, setRetries] = useState(2); // State to track the number of retries
 
+  // setting initial position of green boxes
   const greenBoxes = [
     { x: 1, y: 9 },
     { x: 3, y: 9 },
@@ -23,17 +24,40 @@ export const Animation = () => {
     { x: 21, y: 9 },
   ];
   
+  // meant to be 30px, change to dynamic 
   const clawVisualSize = 30;
   const gridSize = {
     width: 26,
     height: 10,
   };
 
+  // meant to be 1 cell; irregular measurement. settle styling later
   const clawSize = {
     width: 1,
     height: 1,
   };
 
+  // Effect to handle claw movement
+  useEffect(() => {
+    const moveDownInterval = setInterval(() => {
+      if (isMovingDown && clawPosition.y < 9) {
+        // Move down until y = 8 (one block above the bottom of the grid)
+        setClawPosition((prevPosition) => ({
+          ...prevPosition,
+          y: prevPosition.y + 1,
+        }));
+      } else {
+        setIsMovingDown(false); // Stop moving down
+        clearInterval(moveDownInterval); // Clear the interval
+      }
+    }, 100); // Adjust the interval for smoother animation (in milliseconds)
+
+    return () => {
+      clearInterval(moveDownInterval); // Clean up the interval on component unmount
+    };
+  }, [isMovingDown, clawPosition]);
+
+  // listens to keyboard input
   const handleKeyDown = (e) => {
     const { keyCode } = e;
     const newPosition = { ...clawPosition };
@@ -76,26 +100,7 @@ export const Animation = () => {
     console.log(`Current Claw Position: x=${newPosition.x}, y=${newPosition.y}`);
   };
 
-  // Effect to handle claw movement
-  useEffect(() => {
-    const moveDownInterval = setInterval(() => {
-      if (isMovingDown && clawPosition.y < 8) {
-        // Move down until y = 8 (one block above the bottom of the grid)
-        setClawPosition((prevPosition) => ({
-          ...prevPosition,
-          y: prevPosition.y + 1,
-        }));
-      } else {
-        setIsMovingDown(false); // Stop moving down
-        clearInterval(moveDownInterval); // Clear the interval
-      }
-    }, 100); // Adjust the interval for smoother animation (in milliseconds)
-
-    return () => {
-      clearInterval(moveDownInterval); // Clean up the interval on component unmount
-    };
-  }, [isMovingDown, clawPosition]);
-
+  // remove keyboard input when dialog is up
   useEffect(() => {
     if(!gameCompleted){
       document.addEventListener('keydown', handleKeyDown);
@@ -106,6 +111,7 @@ export const Animation = () => {
     };
   }, [clawPosition, gameCompleted]);
 
+  // manual styling of claw
   const clawStyle = {
     left: `${clawPosition.x * clawVisualSize}px`,
     top: `${clawPosition.y * clawVisualSize}px`,
@@ -114,6 +120,7 @@ export const Animation = () => {
     backgroundColor: 'red',
   };
 
+  // renders the white colour grid
   const renderGrid = () => {
     const rows = [];
     for (let i = 0; i < gridSize.height; i++) {
@@ -128,12 +135,12 @@ export const Animation = () => {
     return rows;
   };
 
+  // logic for retrying
   const handleRetryClick = () => {
     setGameCompleted(false); // Reset game completion status
     setClawPosition({ x: 0, y: 0 }); // Reset claw position to (0, 0)
     setRetries(retries - 1); // Decrement the number of retries
   };
-
 
   return (
     <div className="game-container" ref={containerRef}>
