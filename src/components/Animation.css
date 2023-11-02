@@ -38,3 +38,41 @@
 .green-box {
     background-color: green;
 }
+
+@keyframes moveDown {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 270px;
+        /* Adjust this value according to your grid size */
+    }
+}
+
+@keyframes moveUp {
+    from {
+        top: 270px;
+        /* Adjust this value according to your grid size */
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.claw {
+    position: absolute;
+    animation-duration: 2s;
+    /* Adjust the duration of the animation */
+    animation-timing-function: ease-in-out;
+    /* Use ease-in-out timing function */
+}
+
+.move-down-animation {
+    animation-name: moveDown;
+}
+
+.move-up-animation {
+    animation-name: moveUp;
+}
