@@ -44,16 +44,21 @@ export const Animation = () => {
       // Set a timeout to check for overlap after the animation duration
       setTimeout(() => {
         setIsMoving(false);
-
         const overlappingBox = greenBoxes.find((box) => box.x === clawPosition.x && box.y === 9);
 
-        // instead of setting game complete within overlap, set it outside.
-        // so if overlap & animation end OR when claw reaches endpoint, trigger game complete
+        // Check if the claw is at y=0 and overlaps with a green box
         if (overlappingBox) {
           console.log("Claw hit a green box.");
-          setGameCompleted(true);
         }
-      }, 2000); // Duration of the animation in milliseconds
+
+        // Set gameCompleted to true only after moveUp animation has finished
+        setTimeout(() => {
+          if (overlappingBox) {
+            console.log("Claw hit a green box.");
+            setGameCompleted(true);
+          }
+        }, 2000); // Duration of the moveUp animation in milliseconds
+      }, 2000); // Duration of the moveDown animation in milliseconds
     }
   };
 
