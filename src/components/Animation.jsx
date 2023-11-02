@@ -75,20 +75,6 @@ export const Animation = () => {
       handleSpacebarPress();
     }
 
-    // Check if the new position overlaps with any green box
-    const isOverlap = greenBoxes.some((box) => {
-      return (
-        newPosition.x < box.x + 1 && // Adjust the width to account for gaps
-        newPosition.x + clawSize.width > box.x &&
-        newPosition.y < box.y + 1 && // Adjust the height to account for gaps
-        newPosition.y + clawSize.height > box.y
-      );
-    });
-
-    if (isOverlap) {
-      console.log("Claw hit a green box.");
-      setGameCompleted(true);
-    }
     setClawPosition(newPosition);
 
     // Print the coordinates of the updated claw position
