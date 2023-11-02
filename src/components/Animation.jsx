@@ -50,7 +50,7 @@ export const Animation = () => {
         if (overlappingBox) {
           console.log("Claw hit a green box.");
         }
-
+        // can set end point to smth like when claw reach y=25 and then run anim to act like smth dropped
         // Set gameCompleted to true only after moveUp animation has finished
         setTimeout(() => {
           if (overlappingBox) {
