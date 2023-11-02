@@ -7,10 +7,9 @@ export const Animation = () => {
   const [clawPosition, setClawPosition] = useState({ x: 0, y: 0 });
   const [gameCompleted, setGameCompleted] = useState(false);
   const [isMovingDown, setIsMovingDown] = useState(false); // State to track downward movement
-  const [targetY, setTargetY] = useState(0); // New state variable to track target position for moving up
   const [retries, setRetries] = useState(2); // State to track the number of retries
 
-  const [greenBoxes, setGreenBoxes] = useState([
+  const greenBoxes = [
     { x: 1, y: 9 },
     { x: 3, y: 9 },
     { x: 5, y: 9 },
@@ -22,7 +21,8 @@ export const Animation = () => {
     { x: 17, y: 9 },
     { x: 19, y: 9 },
     { x: 21, y: 9 },
-  ]);
+  ];
+  
   const clawVisualSize = 30;
   const gridSize = {
     width: 26,
