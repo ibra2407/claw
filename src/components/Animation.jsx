@@ -50,8 +50,10 @@ export const Animation = () => {
         if (overlappingBox) {
           console.log("Claw hit a green box.");
         }
+
         // can set end point to smth like when claw reach y=25 and then run anim to act like smth dropped
         // Set gameCompleted to true only after moveUp animation has finished
+
         setTimeout(() => {
           if (overlappingBox) {
             console.log("Claw hit a green box.");
@@ -74,12 +76,6 @@ export const Animation = () => {
     } else if (keyCode === 39 && newPosition.x < gridSize.width - clawSize.width) {
       // Right Arrow: Move the claw right; key 39
       newPosition.x += 1;
-    } else if (keyCode === 40 && newPosition.y < gridSize.height - clawSize.height) {
-      // Up Arrow: Move the claw up; key 40
-      newPosition.y += 1;
-    } else if (keyCode === 38 && newPosition.y > 0) {
-      // Down Arrow: Move the claw down; key 38
-      newPosition.y -= 1;
     } else if (keyCode === 32) {
       handleSpacebarPress();
     }
