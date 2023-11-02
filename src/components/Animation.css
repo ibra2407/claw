@@ -23,6 +23,18 @@
 
 .claw {
     position: absolute;
+    width: 30px;
+    /* Set the width of the claw image */
+    height: 30px;
+    /* Set the height of the claw image */
+    background-image: url('./gameimg/claw.png');
+    /* Set the URL of your claw image */
+    background-size: cover;
+    /* Ensure the image covers the entire element */
+    animation-duration: 2s;
+    /* Adjust the duration of the animation */
+    animation-timing-function: ease-in-out;
+    /* Use ease-in-out timing function */
 }
 
 .grid-cell {

@@ -97,13 +97,12 @@ export const Animation = () => {
     };
   }, [clawPosition, gameCompleted]);
 
-  // manual styling of claw
+  // renders the claw
   const clawStyle = {
     left: `${clawPosition.x * clawVisualSize}px`,
     top: `${clawPosition.y * clawVisualSize}px`,
     width: `${clawSize.width * clawVisualSize}px`,
-    height: `${clawSize.height * clawVisualSize}px`,
-    backgroundColor: 'red',
+    height: `${clawSize.height * clawVisualSize}px`
   };
 
   // renders the white colour grid
