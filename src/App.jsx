@@ -29,8 +29,6 @@ function App() {
   // Unique ID is present in the URL but not in local storage, render the game
   return (
     <div className="App">
-      <h1 className="centered-heading">GivingHeroes 2024</h1>
-      <hr />
       <Game />
     </div>
   );

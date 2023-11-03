@@ -16,13 +16,11 @@ body {
   background-attachment: fixed;
   /* This will make the background image static against scrolling */
   background-color: rgb(225, 222, 222);
-  color: hsl(0, 100%, 75%);
-  font-size: 20px;
+  color: hsl(0, 0%, 0%);
+  font-size: 24px;
   max-width: 60%;
   padding: 2rem;
   margin: 0 auto;
-  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.639); */
-  /* Subtle shadow effect */
 }
 
 
@@ -171,8 +169,11 @@ body {
   /* You can set your desired color */
 }
 
-.App,
 .wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
   padding: 10px;
   /* Add padding as needed */
@@ -180,6 +181,7 @@ body {
   /* Optional: Add border-radius for rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.266);
 }
+
 
 h1.centered-heading {
   text-align: center;
