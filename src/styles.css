@@ -5,11 +5,13 @@
 }
 
 body {
-  background: url('./img/sprinkles.png');
-  /* Replace 'path/to/sprinkles-pattern.png' with the actual path to your sprinkles pattern image */
+  background: url('./img/webBG.png');
+  background-size: cover;
+  /* This will resize the background image to cover the whole container */
+  background-attachment: fixed;
+  /* This will make the background image static against scrolling */
   background-color: rgb(225, 222, 222);
   color: hsl(0, 100%, 75%);
-  /* Dark pink color for text */
   font-size: 20px;
   max-width: 60%;
   padding: 2rem;
@@ -17,6 +19,7 @@ body {
   /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.639); */
   /* Subtle shadow effect */
 }
+
 
 .new-item-form {
   display: flex;
