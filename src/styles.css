@@ -23,6 +23,37 @@ body {
   margin: 0 auto;
 }
 
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  /* Add padding as needed */
+  border-radius: 10px;
+  /* Optional: Add border-radius for rounded corners */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.544);
+  text-align: left;
+}
+
+.large-text {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 5px;
+  text-shadow: 10px 10px 20px rgb(0, 0, 0);
+  letter-spacing: 2px;
+  /* Adjust margin as needed */
+}
+
+.centered-heading {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.App {
+  text-align: center;
+}
 
 .new-item-form {
   display: flex;
@@ -169,37 +200,7 @@ body {
   /* You can set your desired color */
 }
 
-.wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  /* Add padding as needed */
-  border-radius: 10px;
-  /* Optional: Add border-radius for rounded corners */
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.544);
-  text-align: left;
-}
 
-.large-text {
-  font-size: 60px;
-  text-align: center;
-  margin-bottom: 5px;
-  text-shadow: 10px 10px 20px rgb(0, 0, 0);
-  letter-spacing: 2px;
-  /* Adjust margin as needed */
-}
-
-.centered-heading {
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
-
-.App {
-  text-align: center;
-}
 
 .superhero-container {
   display: flex;
