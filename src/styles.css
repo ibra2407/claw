@@ -180,8 +180,13 @@ body {
   border-radius: 10px;
   /* Optional: Add border-radius for rounded corners */
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.544);
+  text-align: left;
 }
 
+.App {
+  text-align: center;
+  top: 3rem;
+}
 
 h1.centered-heading {
   text-align: center;
