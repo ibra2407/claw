@@ -179,7 +179,7 @@ body {
   /* Add padding as needed */
   border-radius: 10px;
   /* Optional: Add border-radius for rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.266);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.544);
 }
 
 
