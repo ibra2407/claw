@@ -183,15 +183,22 @@ body {
   text-align: left;
 }
 
-.App {
+.large-text {
+  font-size: 60px;
   text-align: center;
-  top: 3rem;
+  margin-bottom: 5px;
+  text-shadow: 10px 10px 20px rgb(0, 0, 0);
+  letter-spacing: 2px;
+  /* Adjust margin as needed */
 }
 
-h1.centered-heading {
+.centered-heading {
   text-align: center;
-  color: rgb(240, 91, 173)
-    /* Center the text */
+  color: rgb(255, 255, 255);
+}
+
+.App {
+  text-align: center;
 }
 
 .superhero-container {
