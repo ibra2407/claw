@@ -4,7 +4,7 @@ import DialogBox from './DialogBox';
 
 export const Animation = () => {
   const containerRef = useRef(null);
-  const [clawPosition, setClawPosition] = useState({ x: 0, y: 1 });
+  const [clawPosition, setClawPosition] = useState({ x: 0, y: 0 });
   const [gameCompleted, setGameCompleted] = useState(false);
   const [retries, setRetries] = useState(2); // State to track the number of retries
   const [isMoving, setIsMoving] = useState(false);
