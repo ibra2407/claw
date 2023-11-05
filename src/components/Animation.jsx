@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Animation.css';
 import DialogBox from './DialogBox';
 import PaperCutoutOverlay from './PaperCutoutOverlay.jsx'; // Import the overlay component
+import Box from './Box'; // Import the Box component
 
 export const Animation = () => {
   const containerRef = useRef(null);
@@ -9,6 +10,8 @@ export const Animation = () => {
   const [gameCompleted, setGameCompleted] = useState(false);
   const [retries, setRetries] = useState(2); // State to track the number of retries
   const [isMoving, setIsMoving] = useState(false);
+  const [showBox, setShowBox] = useState(false);
+
 
   // setting initial position of green boxes
   const greenBoxes = [
@@ -49,7 +52,10 @@ export const Animation = () => {
 
         // Check if the claw is at y=0 and overlaps with a green box
         if (overlappingBox) {
+          setShowBox(true);
           console.log("Claw hit a green box.");
+        } else {
+          setShowBox(false);
         }
 
         // can set end point to smth like when claw reach y=25 and then run anim to act like smth dropped
@@ -132,10 +138,13 @@ export const Animation = () => {
     <div className="game-container" ref={containerRef}>
       <PaperCutoutOverlay />
       {renderGrid()}
+      {showBox && (
+        <div className={`box ${showBox && 'move-box-up-animation'}`} style={{ left: `${clawPosition.x * 30}px` }} />
+      )}
       <div className={`claw ${isMoving ? 'move-down-animation' : 'move-up-animation'}`} style={clawStyle}></div>
       {gameCompleted && <DialogBox message="Your Superhero is..." onRetryClick={handleRetryClick} retries={retries}/>}
     </div>
-  );
+  );  
 };
 
 export default Animation;

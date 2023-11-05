@@ -1,0 +1,25 @@
+@keyframes moveBoxUp {
+    from {
+        top: 297px;
+        /* Starting position shifted down by one cell (30px) */
+    }
+
+    to {
+        top: 27px;
+        /* Ending position shifted up by one cell (30px) */
+    }
+}
+
+.box {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('./gameimg/box.png') center/cover no-repeat;
+    z-index: 1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.move-box-up-animation {
+    animation-name: moveBoxUp;
+}
