@@ -53,7 +53,7 @@
 }
 
 .green-box {
-    /* background-color: green; */
+    background-color: green;
 }
 
 @keyframes moveDown {

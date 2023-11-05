@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Animation.css';
 import DialogBox from './DialogBox';
+import PaperCutoutOverlay from './PaperCutoutOverlay.jsx'; // Import the overlay component
 
 export const Animation = () => {
   const containerRef = useRef(null);
@@ -129,6 +130,7 @@ export const Animation = () => {
 
   return (
     <div className="game-container" ref={containerRef}>
+      <PaperCutoutOverlay />
       {renderGrid()}
       <div className={`claw ${isMoving ? 'move-down-animation' : 'move-up-animation'}`} style={clawStyle}></div>
       {gameCompleted && <DialogBox message="Your Superhero is..." onRetryClick={handleRetryClick} retries={retries}/>}
