@@ -142,13 +142,18 @@ export const Animation = () => {
 
   useEffect(() => {
     if (!initialAnimationComplete) {
-      setIsMoving(true);
-      setTimeout(() => {
-        setIsMoving(false);
-        setInitialAnimationComplete(true);
-      }, 2000); // Duration of the initial animation in milliseconds
+      // Set initial claw position at (0, 0) and disable claw animation
+      setClawPosition({ x: 0, y: 0 });
+      setIsMoving(false);
+  
+      // Enable wire animation
+      setShowWire(true);
+  
+      // Set initial animation as complete without delay
+      setInitialAnimationComplete(true);
     }
   }, [initialAnimationComplete]);
+  
 
   return (
     <div className="game-container" ref={containerRef}>
