@@ -10,7 +10,7 @@ function App() {
     // Unique ID parameter is not present in the URL
     return (
       <div className="App">
-        <h1 className="centered-heading large-text"> Here for GivingHeroes 2024? <br></br> <br></br> Please get a unique ID from SKH DO!</h1>
+        <h1 className="centered-heading large-text"> Here for GivingHeroes 2024?<br></br> Please get a unique ID from SKH DO!</h1>
       </div>
     );
   }
