@@ -18,26 +18,19 @@ export const Animation = () => {
 
   // setting initial position of green boxes
   const greenBoxes = [
-    { x: 1, y: 9 },
-    { x: 3, y: 9 },
-    { x: 5, y: 9 },
-    { x: 7, y: 9 },
-    { x: 9, y: 9 },
-    { x: 11, y: 9 },
-    { x: 13, y: 9 },
-    { x: 15, y: 9 },
-    { x: 17, y: 9 },
-    { x: 19, y: 9 },
-    { x: 21, y: 9 },
-    { x: 23, y: 9 },
-    { x: 25, y: 9 }
+    { x: 1, y: 5 },
+    { x: 3, y: 5 },
+    { x: 5, y: 5 },
+    { x: 7, y: 5 },
+    { x: 9, y: 5 },
+    { x: 11, y: 5 }
   ];
   
   // meant to be 30px, change to dynamic 
-  const clawVisualSize = 30;
+  const clawVisualSize = 60;
   const gridSize = {
-    width: 26,
-    height: 10,
+    width: 13,
+    height: 6,
   };
 
   // meant to be 1 cell; irregular measurement. settle styling later
@@ -54,7 +47,7 @@ export const Animation = () => {
       // Set a timeout to check for overlap after the animation duration
       setTimeout(() => {
         setIsMoving(false);
-        const overlappingBox = greenBoxes.find((box) => box.x === clawPosition.x && box.y === 9);
+        const overlappingBox = greenBoxes.find((box) => box.x === clawPosition.x && box.y === 5);
 
         // Check if the claw is at y=0 and overlaps with a green box
         if (overlappingBox) {
@@ -161,7 +154,7 @@ export const Animation = () => {
       <PaperCutoutOverlay />
       {renderGrid()}
       {showBox && (
-        <div className={`box ${showBox && 'move-box-up-animation'}`} style={{ left: `${clawPosition.x * 30}px` }} />
+        <div className={`box ${showBox && 'move-box-up-animation'}`} style={{ left: `${clawPosition.x * 60}px` }} />
       )}
       <div className={`claw ${isMoving ? 'move-down-animation' : 'move-up-animation'}`} style={clawStyle}></div>
       {showWire && <Wire xCoordinate={clawPosition.x} isMoving={isMoving} />} {/* Conditionally render the wire component */}

@@ -28,9 +28,9 @@
 
 .claw {
     position: absolute;
-    width: 30px;
+    width: 60px;
     /* Set the width of the claw image */
-    height: 30px;
+    height: 60px;
     /* Set the height of the claw image */
     background-image: url('./gameimg/claw.png');
     /* Set the URL of your claw image */
@@ -44,9 +44,10 @@
 }
 
 .grid-cell {
-    width: 30px;
-    height: 30px;
-    /* border: 1px solid #fff; */
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ff0000;
+    z-index: 5;
 }
 
 .grid-row {
@@ -54,7 +55,7 @@
 }
 
 .green-box {
-    background-color: green;
+    /* background-color: green; */
 }
 
 @keyframes moveDown {
