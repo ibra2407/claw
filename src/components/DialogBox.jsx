@@ -115,7 +115,7 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
         <div className="button-container">
           {retries > 0 && (
             <button className="try-again-button" onClick={handleTryAgain}>
-              Try Again ({retries} {retries === 1 ? 'try' : 'tries'} left)
+              You have {retries} {retries === 1 ? 'try' : 'tries'} left!
             </button>)}
         </div>
         <hr></hr>

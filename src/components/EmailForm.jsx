@@ -51,7 +51,7 @@ const EmailForm = ({ UniqueID, superheroName, onEmailSent, alreadySent }) => {
           value={superheroName}
           disabled // Disables field from edits
         />
-        <button type="submit">Submit</button>
+        <button type="submit">I'll take it! Let's go!</button>
       </form>
     </div>
   );
