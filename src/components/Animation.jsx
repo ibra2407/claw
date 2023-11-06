@@ -103,6 +103,14 @@ export const Animation = () => {
     };
   }, [clawPosition, gameCompleted]);
 
+  // prevents box from appearing
+  useEffect(() => {
+    if (gameCompleted) {
+      setShowBox(false);
+    }
+  }, [gameCompleted]);
+  
+
   // renders the claw
   const clawStyle = {
     left: `${clawPosition.x * clawVisualSize}px`,

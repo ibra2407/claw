@@ -3,7 +3,7 @@ import './Box.css';
 
 const Box = ({ position }) => {
   const boxStyle = {
-    left: `${position.x * 60}px`, // Assuming the box size is 30px
+    left: `${position.x * 60}px`,
     top: `${position.y * 60}px`,
   };
 
