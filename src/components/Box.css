@@ -1,11 +1,11 @@
 @keyframes moveBoxUp {
     from {
-        top: 320px;
+        top: 325px;
         /* Starting position shifted down by one cell (30px) */
     }
 
     to {
-        top: 60px;
+        top: 55px;
         /* Ending position shifted up by one cell (30px) */
     }
 }
