@@ -1,0 +1,43 @@
+.wire {
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: black;
+    z-index: 1;
+    top: 0px;
+}
+
+/* Rest of the CSS remains unchanged */
+
+
+@keyframes extendWire {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 70%;
+    }
+}
+
+@keyframes retractWire {
+    from {
+        height: 70%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+.extend-animation {
+    animation-name: extendWire;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.retract-animation {
+    animation-name: retractWire;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}

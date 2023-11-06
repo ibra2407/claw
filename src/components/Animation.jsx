@@ -2,7 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Animation.css';
 import DialogBox from './DialogBox';
 import PaperCutoutOverlay from './PaperCutoutOverlay.jsx'; // Import the overlay component
-import Box from './Box'; // Import the Box component
+import Box from './Box.jsx'; // Import the Box component
+import Wire from './Wire.jsx'; // Import the Wire component
 
 export const Animation = () => {
   const containerRef = useRef(null);
@@ -11,6 +12,8 @@ export const Animation = () => {
   const [retries, setRetries] = useState(2); // State to track the number of retries
   const [isMoving, setIsMoving] = useState(false);
   const [showBox, setShowBox] = useState(false);
+  const [showWire, setShowWire] = useState(false);
+  const [initialAnimationComplete, setInitialAnimationComplete] = useState(false);
 
 
   // setting initial position of green boxes
@@ -26,6 +29,8 @@ export const Animation = () => {
     { x: 17, y: 9 },
     { x: 19, y: 9 },
     { x: 21, y: 9 },
+    { x: 23, y: 9 },
+    { x: 25, y: 9 }
   ];
   
   // meant to be 30px, change to dynamic 
@@ -44,6 +49,7 @@ export const Animation = () => {
   const handleSpacebarPress = () => {
     if (!isMoving) {
       setIsMoving(true);
+      setShowWire(true);
 
       // Set a timeout to check for overlap after the animation duration
       setTimeout(() => {
@@ -134,6 +140,16 @@ export const Animation = () => {
     setRetries(retries - 1); // Decrement the number of retries
   };
 
+  useEffect(() => {
+    if (!initialAnimationComplete) {
+      setIsMoving(true);
+      setTimeout(() => {
+        setIsMoving(false);
+        setInitialAnimationComplete(true);
+      }, 2000); // Duration of the initial animation in milliseconds
+    }
+  }, [initialAnimationComplete]);
+
   return (
     <div className="game-container" ref={containerRef}>
       <PaperCutoutOverlay />
@@ -142,6 +158,7 @@ export const Animation = () => {
         <div className={`box ${showBox && 'move-box-up-animation'}`} style={{ left: `${clawPosition.x * 30}px` }} />
       )}
       <div className={`claw ${isMoving ? 'move-down-animation' : 'move-up-animation'}`} style={clawStyle}></div>
+      {showWire && <Wire xCoordinate={clawPosition.x} isMoving={isMoving} />} {/* Conditionally render the wire component */}
       {gameCompleted && <DialogBox message="Your Superhero is..." onRetryClick={handleRetryClick} retries={retries}/>}
     </div>
   );  
