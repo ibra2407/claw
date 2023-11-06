@@ -32,7 +32,7 @@
     /* Set the width of the claw image */
     height: 60px;
     /* Set the height of the claw image */
-    background-image: url('./gameimg/claw.png');
+    background-image: url('./gameimg/claw2.png');
     /* Set the URL of your claw image */
     background-size: cover;
     /* Ensure the image covers the entire element */

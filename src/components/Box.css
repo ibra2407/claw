@@ -14,7 +14,7 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    background: url('./gameimg/box.png') center/cover no-repeat;
+    background: url('./gameimg/box2.png') center/cover no-repeat;
     z-index: 1;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
