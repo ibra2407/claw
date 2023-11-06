@@ -136,7 +136,7 @@ export const Animation = () => {
   // logic for retrying
   const handleRetryClick = () => {
     setGameCompleted(false); // Reset game completion status
-    setClawPosition({ x: 0, y: 1 }); // Reset claw position to (0, 0)
+    setClawPosition({ x: 0, y: 0 }); // Reset claw position to (0, 0)
     setRetries(retries - 1); // Decrement the number of retries
   };
 
