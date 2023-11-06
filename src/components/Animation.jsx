@@ -138,6 +138,7 @@ export const Animation = () => {
     setGameCompleted(false); // Reset game completion status
     setClawPosition({ x: 0, y: 0 }); // Reset claw position to (0, 0)
     setRetries(retries - 1); // Decrement the number of retries
+    setShowBox(false);
   };
 
   useEffect(() => {
