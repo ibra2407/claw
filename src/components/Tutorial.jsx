@@ -40,20 +40,23 @@ const Tutorial = ({ onClose }) => {
       <div className="tutorial-content">
         {currentPage === 1 && (
           <div className="page-content">
-            <img src={hosp1} alt="Hospital 1" />
-            {/* Additional content for Page 1 */}
+            <img src={hosp1} className="tutorial-image" />
+            <br></br>
+            Hello
           </div>
         )}
         {currentPage === 2 && (
           <div className="page-content">
-            <img src={hosp2} alt="Hospital 2" />
-            {/* Additional content for Page 2 */}
+            <img src={hosp2} className="tutorial-image" />
+            <br></br>
+            Hello
           </div>
         )}
         {currentPage === 3 && (
           <div className="page-content">
-            <img src={hosp3} alt="Hospital 3" />
-            {/* Additional content for Page 3 */}
+            <img src={hosp3} className="tutorial-image" />
+            <br></br>
+            Hello
           </div>
         )}
 

@@ -36,7 +36,7 @@ function App() {
       {/* Render Tutorial button when showTutorial state is true */}
       {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
       {/* Button to open the tutorial */}
-      {uniqueID && !showTutorial && <button className="tutorial-button" onClick={() => setShowTutorial(true)}>Open Tutorial</button>}
+      {uniqueID && !showTutorial && <button className="tutorial-button" onClick={() => setShowTutorial(true)}>Story/Tutorial</button>}
     </div>
   );
 }
