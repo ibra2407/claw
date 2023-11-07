@@ -17,40 +17,38 @@
 .tutorial-content {
     flex-grow: 1;
     overflow-y: auto;
+    text-align: center;
+    /* Center the content inside the tutorial */
 }
 
 .navigation-buttons {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     margin-top: 20px;
-    border-radius: 10px;
-}
-
-.page-content {
-    margin: auto;
 }
 
 /* Styling for the buttons */
 .navigation-buttons button {
-    padding: 10px 20px;
+    margin: 10 10px;
+    /* Add space between the buttons */
+    padding: 5px;
     border-radius: 5px;
 }
 
 /* Style "Prev" and "Next" buttons */
 .navigation-buttons .prev-button {
     order: 1;
-    /* Places the "Prev" button first on the left */
 }
 
 .navigation-buttons .next-button {
-    order: 2;
-    /* Places the "Next" button second on the right */
+    order: 3;
 }
 
 /* Style "Close" button */
 .close-button {
-    order: 3;
-    /* Places the "Close" button last at the very bottom */
-    margin-top: 20px;
+    order: 2;
+    margin: 10 10px;
+    /* Add space between the buttons */
+    padding: 5px;
+    border-radius: 5px;
 }
