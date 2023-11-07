@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Tutorial.css';
-import hosp1 from './gameimg/hosp1.jpg'
-import hosp2 from './gameimg/hosp2.jpg'
-import hosp3 from './gameimg/hosp3.jpg'
+import hosp1 from './gameimg/hosp1.png'
+import hosp2 from './gameimg/hosp2.png'
+import hosp3 from './gameimg/hosp3.png'
+import hosp4 from './gameimg/hosp4.png'
 
 const Tutorial = ({ onClose }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,27 +43,34 @@ const Tutorial = ({ onClose }) => {
           <div className="page-content">
             <img src={hosp1} className="tutorial-image" />
             <br></br>
-            Hello
+            P1
           </div>
         )}
         {currentPage === 2 && (
           <div className="page-content">
             <img src={hosp2} className="tutorial-image" />
             <br></br>
-            Hello
+            P2
           </div>
         )}
         {currentPage === 3 && (
           <div className="page-content">
             <img src={hosp3} className="tutorial-image" />
             <br></br>
-            Hello
+            P3
+          </div>
+        )}
+        {currentPage === 4 && (
+          <div className="page-content">
+            <img src={hosp4} className="tutorial-image" />
+            <br></br>
+            P4
           </div>
         )}
 
         <div className="navigation-buttons">
           {currentPage > 1 && <button className="prev-button" onClick={handlePrevPage}>Prev</button>}
-          {currentPage < 3 && <button className="next-button" onClick={handleNextPage}>Next</button>}
+          {currentPage < 4 && <button className="next-button" onClick={handleNextPage}>Next</button>}
         </div>
         <button className="close-button" onClick={handleClose}>Close</button>
       </div>
