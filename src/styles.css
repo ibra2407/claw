@@ -79,7 +79,7 @@ body {
 .tutorial-button {
   padding: 5px;
   font-size: 18px;
-  background-color: #ff6060;
+  background-color: #ffb560;
   color: rgb(255, 255, 255);
   border: 2px solid hsl(0, 0%, 0%);
   border-radius: 5px;
@@ -89,6 +89,6 @@ body {
 }
 
 .tutorial-button:hover {
-  background-color: #30ffac;
+  background-color: #61ff89;
   color: rgb(0, 0, 0);
 }
