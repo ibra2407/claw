@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from 'react';
 import Game from "./components/Game";
+import Tutorial from "./components/Tutorial.jsx";
 import "./styles.css";
 
 function App() {
   const searchParams = new URLSearchParams(window.location.search);
   const uniqueID = searchParams.get("id");
+  const [showTutorial, setShowTutorial] = useState(false);
 
   if (!uniqueID) {
     // Unique ID parameter is not present in the URL
@@ -26,11 +28,15 @@ function App() {
     );
   }
 
-  // Unique ID is present in the URL but not in local storage, render the game
+  // Unique ID is present in the URL but not in local storage, render the game and tutorial button
   return (
     <div className="App">
       <h1 className="centered-heading large-text">SKH Giving Heroes</h1>
       <Game />
+      {/* Render Tutorial button when showTutorial state is true */}
+      {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
+      {/* Button to open the tutorial */}
+      {uniqueID && !showTutorial && <button className="tutorial-button" onClick={() => setShowTutorial(true)}>Open Tutorial</button>}
     </div>
   );
 }
