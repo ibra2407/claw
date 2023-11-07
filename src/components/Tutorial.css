@@ -12,6 +12,19 @@
     z-index: 100;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    /* Initially set opacity to 0 */
+    transform: translate(-50%, -50%) scale(0.8);
+    /* Initially scale down the component */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Add transition for opacity and transform */
+}
+
+.tutorial-dialog.open {
+    opacity: 1;
+    /* When the class 'open' is applied, set opacity to 1 */
+    transform: translate(-50%, -50%) scale(1);
+    /* Scale up the component */
 }
 
 .tutorial-content {
@@ -52,4 +65,11 @@
     padding: 5px;
     border-radius: 5px;
     position: center;
+}
+
+.tutorial-dialog.closing {
+    opacity: 0;
+    /* When the class 'closing' is applied, set opacity to 0 */
+    transform: translate(-50%, -50%) scale(0.8);
+    /* Scale down the component */
 }

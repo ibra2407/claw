@@ -28,7 +28,7 @@ body {
   /* Add padding as needed */
   border-radius: 10px;
   /* Optional: Add border-radius for rounded corners */
-  box-shadow: 0 0 25px rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
   text-align: left;
 }
 
@@ -73,4 +73,19 @@ body {
 .btn.btn-danger:hover,
 .btn.btn-danger:focus-visible {
   background: hsl(0, 100%, 40%, 0.2);
+}
+
+.tutorial-button {
+  padding: 5px;
+  font-size: 18px;
+  background-color: #00ff08;
+  color: white;
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tutorial-button:hover {
+  background-color: #00ffe5;
 }
