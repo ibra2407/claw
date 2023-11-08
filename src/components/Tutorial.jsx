@@ -4,6 +4,7 @@ import hosp1 from './gameimg/hosp1.png'
 import hosp2 from './gameimg/hosp2.png'
 import hosp3 from './gameimg/hosp3.png'
 import hosp4 from './gameimg/hosp4.png'
+import hosp5 from './gameimg/hosp5.png'
 
 const Tutorial = ({ onClose }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -67,10 +68,17 @@ const Tutorial = ({ onClose }) => {
             P4
           </div>
         )}
+        {currentPage === 5 && (
+          <div className="page-content">
+            <img src={hosp5} className="tutorial-image" />
+            <br></br>
+            P5
+          </div>
+        )}
 
         <div className="navigation-buttons">
           {currentPage > 1 && <button className="prev-button" onClick={handlePrevPage}>Prev</button>}
-          {currentPage < 4 && <button className="next-button" onClick={handleNextPage}>Next</button>}
+          {currentPage < 5 && <button className="next-button" onClick={handleNextPage}>Next</button>}
         </div>
         <button className="close-button" onClick={handleClose}>Close</button>
       </div>
