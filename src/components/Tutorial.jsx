@@ -39,7 +39,6 @@ const Tutorial = ({ onClose }) => {
     }, 300); // Wait for the duration of the animation (0.3s) before calling onClose
 };
 
-
   return (
     <div className={`tutorial-dialog ${isOpen ? 'open' : ''}`}>
       <div className="tutorial-content">

@@ -43,14 +43,39 @@ const superheroImages = {
   Superman
 };
 
+const superheroProbabilities = {
+  Batman: 1,
+  CaptainAmerica: 2,
+  Cyclops: 4,
+  Flash: 3,
+  Hawkeye: 3,
+  Hulk: 2,
+  Ironman: 1,
+  Spiderman: 2,
+  Thor: 2,
+  Wolverine: 3,
+  Superman: 1
+};
+
+const generateWeightedSuperheroes = () => {
+  let weightedSuperheroes = [];
+  for (const superhero in superheroProbabilities) {
+    const weight = superheroProbabilities[superhero];
+    weightedSuperheroes = [...weightedSuperheroes, ...Array(weight).fill(superhero)];
+  }
+  return weightedSuperheroes;
+};
+
 const getRandomSuperhero = () => {
-  const randomIndex = Math.floor(Math.random() * superheroNames.length);
-  const selectedSuperheroName = superheroNames[randomIndex];
+  const weightedSuperheroes = generateWeightedSuperheroes();
+  const randomIndex = Math.floor(Math.random() * weightedSuperheroes.length);
+  const selectedSuperheroName = weightedSuperheroes[randomIndex];
   return {
     name: selectedSuperheroName,
     image: superheroImages[selectedSuperheroName]
   };
 };
+
 
 const DialogBoxContent = ({ message, onRetryClick, retries }) => {
   const [emailSent, setEmailSent] = useState(false);

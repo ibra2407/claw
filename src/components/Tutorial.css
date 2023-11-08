@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: linear-gradient(to bottom, #ff7272, rgb(255, 211, 211));
+    background: linear-gradient(to bottom, #ffb672, rgb(255, 180, 180));
 
     border: 2px solid black;
     border-radius: 20px;
