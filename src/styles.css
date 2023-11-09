@@ -20,7 +20,7 @@ body {
 
 .wrapper {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: linear-gradient(to bottom, #5d82fc, rgb(213, 221, 252));
