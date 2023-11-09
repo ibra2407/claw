@@ -1,16 +1,13 @@
 {
   "name": "react",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
-  "homepage": "https://ibra2407.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "react-scripts start"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
