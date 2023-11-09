@@ -1,14 +1,14 @@
 .dialog-box {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.314);
-    z-index: 9999;
+    z-index: 9999 !important;
     color: black;
     /* Ensure text color is visible */
     font-size: 16px;
@@ -20,7 +20,7 @@
 .emailForm {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -55,9 +55,9 @@
 }
 
 .superhero-details img {
-    width: 400px;
+    width: 90%;
     /* Set the desired width */
-    height: 400px;
+    height: 90%;
     /* Set the desired height */
 }
 
@@ -101,7 +101,7 @@
     justify-content: space-between;
     width: 100%;
     /* Make sure the content container takes the full width */
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     /* Add space between content container and email form */
     flex-direction: column;
     align-items: center;
