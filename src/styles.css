@@ -19,6 +19,7 @@ body {
 }
 
 .wrapper {
+  margin-top: 1%;
   position: fixed;
   top: 55%;
   left: 50%;
@@ -79,8 +80,8 @@ body {
 .tutorial-button {
   padding: 5px;
   font-size: 18px;
-  background-color: #ffb560;
-  color: rgb(255, 255, 255);
+  background-color: rgb(96, 255, 144);
+  color: rgb(0, 0, 0);
   border: 2px solid hsl(0, 0%, 0%);
   border-radius: 5px;
 
@@ -89,6 +90,6 @@ body {
 }
 
 .tutorial-button:hover {
-  background-color: #61ff89;
-  color: rgb(0, 0, 0);
+  background-color: #61d2ff;
+  color: rgb(255, 255, 255);
 }
