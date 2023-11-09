@@ -6,6 +6,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-)
+);
 
 // used to be Main.jsx
