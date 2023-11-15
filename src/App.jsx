@@ -1,18 +1,21 @@
+// App.jsx
 import React, { useState } from 'react';
-import Game from "./components/Game";
-import Tutorial from "./components/Tutorial.jsx";
-import "./styles.css";
+import Animation from './components/Animation.jsx';
+import Tutorial from './components/Tutorial.jsx';
+import './styles.css';
 
 function App() {
   const searchParams = new URLSearchParams(window.location.search);
-  const uniqueID = searchParams.get("id");
+  const uniqueID = searchParams.get('id');
   const [showTutorial, setShowTutorial] = useState(false);
 
   if (!uniqueID) {
     // Unique ID parameter is not present in the URL
     return (
       <div className="App">
-        <h1 className="centered-heading large-text"> Here for SKH GivingHeroes 2024?<br></br> Please get a unique ID from SKH DO!</h1>
+        <h1 className="centered-heading large-text">
+          Here for SKH GivingHeroes 2024?<br></br> Please get a unique ID from SKH DO!
+        </h1>
       </div>
     );
   }
@@ -23,7 +26,9 @@ function App() {
     // Unique ID is present in local storage, indicating donation has been made
     return (
       <div className="App">
-        <h1 className="centered-heading large-text"> This token has been used! <br></br> Thanks for donating, Hero!</h1>
+        <h1 className="centered-heading large-text">
+          This token has been used! <br></br> Thanks for donating, Hero!
+        </h1>
       </div>
     );
   }
@@ -32,11 +37,18 @@ function App() {
   return (
     <div className="App">
       <h1 className="centered-heading large-text">SKH Giving Heroes</h1>
-      <Game />
-      {/* Render Tutorial button when showTutorial state is true */}
+      <div className="wrapper">
+        <div>Pick your lucky box!</div>
+        <Animation />
+      </div>
+      {/* Render Tutorial when showTutorial state is true */}
       {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
       {/* Button to open the tutorial */}
-      {uniqueID && !showTutorial && <button className="tutorial-button" onClick={() => setShowTutorial(true)}>Story/Tutorial</button>}
+      {uniqueID && !showTutorial && (
+        <button className="tutorial-button" onClick={() => setShowTutorial(true)}>
+          Story/Tutorial
+        </button>
+      )}
     </div>
   );
 }
