@@ -1,6 +1,6 @@
 .dialog-box {
-    position: absolute;
-    top: 40%;
+    position: fixed;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
@@ -63,6 +63,7 @@
 }
 
 .try-again-button {
+    position: relative;
     text-align: center;
     padding: 5px;
     /* Set padding for the button */
@@ -80,20 +81,13 @@
     /* Add pointer cursor on hover */
     transition: background-color 0.2s;
     /* Add smooth background color transition */
-    margin-left: 10px;
     letter-spacing: 1.5px;
+    margin: auto;
 }
 
 .try-again-button:hover {
     background-color: #f269f2;
     /* Change background color on hover */
-}
-
-.dialog-box {
-    /* ... other styles ... */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .content-container {
