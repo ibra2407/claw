@@ -109,7 +109,7 @@
     z-index: 10;
     cursor: pointer;
     transition: background-color 0.2s;
-    animation: sparkle 1s ease-in-out 10;
+    animation: sparkle 1s ease-in-out infinite;
 }
 
 .tutorial-button:hover {
