@@ -95,7 +95,7 @@ const Tutorial = ({ onClose }) => {
           <div className="page-content">
             <img src={tut3} className="tutorial-image" />
             <br></br>
-            Find out where the mystery boxes are to retrieve your hero!
+            Find out where the mystery boxes are to retrieve your hero! If you catch nothing, try another place!
           </div>
         )}
 
