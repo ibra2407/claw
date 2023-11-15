@@ -21,7 +21,6 @@
     /* Ensure .game-object is positioned relative to this container */
 }
 
-
 .animation-container {
     position: relative;
 }

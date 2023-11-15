@@ -109,9 +109,24 @@
     z-index: 10;
     cursor: pointer;
     transition: background-color 0.2s;
+    animation: sparkle 1s ease-in-out 10;
 }
 
 .tutorial-button:hover {
     background-color: #00b3ff;
     color: white;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
