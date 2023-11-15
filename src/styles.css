@@ -11,24 +11,37 @@
 }
 
 body {
+  font-family: 'superfont', sans-serif;
   background: url('./img/BG.png');
   background-size: cover;
-  /* This will resize the background image to cover the whole container */
   background-attachment: fixed;
-  /* This will make the background image static against scrolling */
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* Make the App take the full height of the viewport */
+}
+
+.centered-heading {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  text-shadow: 10px 10px 20px rgb(0, 0, 0);
+  letter-spacing: 2px;
+  margin: 0;
 }
 
 .wrapper {
   margin-top: 1%;
-  position: fixed;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: linear-gradient(to bottom, #5d82fc, rgb(213, 221, 252));
   padding: 10px;
-  /* Add padding as needed */
   border-radius: 10px;
-  /* Optional: Add border-radius for rounded corners */
   box-shadow: 0 0 10px rgb(0, 0, 0);
   text-align: left;
   color: white;
@@ -39,16 +52,23 @@ body {
   text-align: center;
   text-shadow: 10px 10px 20px rgb(0, 0, 0);
   letter-spacing: 2px;
-  /* Adjust margin as needed */
 }
 
-.centered-heading {
-  text-align: center;
+.tutorial-button {
+  margin-top: 1%;
+  padding: 5px;
+  font-size: 18px;
+  background-color: rgb(96, 255, 144);
+  color: rgb(0, 0, 0);
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tutorial-button:hover {
+  background-color: #61d2ff;
   color: rgb(255, 255, 255);
-}
-
-.App {
-  text-align: center;
 }
 
 .btn {
@@ -75,21 +95,4 @@ body {
 .btn.btn-danger:hover,
 .btn.btn-danger:focus-visible {
   background: hsl(0, 100%, 40%, 0.2);
-}
-
-.tutorial-button {
-  padding: 5px;
-  font-size: 18px;
-  background-color: rgb(96, 255, 144);
-  color: rgb(0, 0, 0);
-  border: 2px solid hsl(0, 0%, 0%);
-  border-radius: 5px;
-
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.tutorial-button:hover {
-  background-color: #61d2ff;
-  color: rgb(255, 255, 255);
 }
