@@ -38,8 +38,6 @@ function App() {
     );
   }
 
-  
-
   // Unique ID is present in the URL but not in local storage, render the game and tutorial button
   return (
     <div className="App">
