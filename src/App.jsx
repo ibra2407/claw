@@ -46,6 +46,21 @@ function App() {
         <div>Pick your lucky box!</div>
         <Animation />
       </div>
+
+      <button className='control-button'>
+        Left
+      </button>
+
+      <button className='control-button'>
+        Catch
+      </button>
+
+      <button className='control-button'>
+        Right
+      </button>
+
+
+
       {/* Render Tutorial when showTutorial state is true */}
       {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
       {/* Button to open the tutorial */}
@@ -57,7 +72,7 @@ function App() {
           setEnableSparkle(false); // Disable sparkle animation after the first click
         }}
       >
-          Story/Tutorial
+        Story/Tutorial
         </button>
       )}
     </div>

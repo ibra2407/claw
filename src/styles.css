@@ -111,3 +111,18 @@ body {
   z-index: 999;
   /* Ensure the overlay is on top of other content */
 }
+
+.control-button {
+  margin-top: 1%;
+  padding: 5px;
+  font-size: 18px;
+  background-color: rgb(188, 188, 188);
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 5px;
+}
+
+.control-button:hover {
+  background-color: #ffc861;
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+}
