@@ -59,8 +59,6 @@ function App() {
         Right
       </button>
 
-
-
       {/* Render Tutorial when showTutorial state is true */}
       {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
       {/* Button to open the tutorial */}
