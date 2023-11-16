@@ -47,19 +47,20 @@ function App() {
         <Animation />
       </div>
 
-      <button className='control-button'>
-        Left
-      </button>
+      <div className="control-buttons-container">
+        <button className='control-button'>
+          Left
+        </button>
 
-      <button className='control-button'>
-        Catch
-      </button>
+        <button className='control-button'>
+          Catch
+        </button>
 
-      <button className='control-button'>
-        Right
-      </button>
+        <button className='control-button'>
+          Right
+        </button>
+      </div>
 
-      {/* Render Tutorial when showTutorial state is true */}
       {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
       {/* Button to open the tutorial */}
       {uniqueID && !showTutorial && (
