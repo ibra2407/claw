@@ -59,6 +59,7 @@
 
 .navigation-buttons .prev-button:hover {
     background-color: #00ffe5;
+    transform: scale(1.05);
 }
 
 .navigation-buttons .next-button {
@@ -70,6 +71,7 @@
 
 .navigation-buttons .next-button:hover {
     background-color: #00ffe5;
+    transform: scale(1.05);
 }
 
 /* Style "Close" button */
@@ -83,6 +85,7 @@
 
 .close-button:hover {
     background-color: #00ffe5;
+    transform: scale(1.05);
 }
 
 .tutorial-dialog.closing {
@@ -102,7 +105,7 @@
 .tutorial-button {
     padding: 5px;
     font-size: 18px;
-    background-color: #00ff11;
+    background-color: rgb(101, 255, 111);
     color: rgb(0, 0, 0);
     border: 2px solid hsl(0, 0%, 0%);
     border-radius: 5px;
@@ -114,6 +117,7 @@
 .tutorial-button:hover {
     background-color: #00e1ff;
     color: white;
+    transform: scale(1.05);
 }
 
 .tutorial-button.sparkle {

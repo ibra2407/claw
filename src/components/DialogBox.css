@@ -48,6 +48,7 @@
 
 .emailForm button:hover {
     background-color: #f269f2;
+    transform: scale(1.05);
 }
 
 .emailForm button:disabled {
@@ -88,6 +89,7 @@
 .try-again-button:hover {
     background-color: #f269f2;
     /* Change background color on hover */
+    transform: scale(1.05);
 }
 
 .content-container {
