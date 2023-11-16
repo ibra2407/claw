@@ -38,6 +38,24 @@ function App() {
     );
   }
 
+  const handleLeftButtonClick = () => {
+    // Simulate left arrow key press
+    const leftArrowKeyEvent = new KeyboardEvent('keydown', { keyCode: 37 });
+    document.dispatchEvent(leftArrowKeyEvent);
+  };
+
+  const handleCatchButtonClick = () => {
+    // Simulate spacebar press
+    const spacebarKeyEvent = new KeyboardEvent('keydown', { keyCode: 32 });
+    document.dispatchEvent(spacebarKeyEvent);
+  };
+
+  const handleRightButtonClick = () => {
+    // Simulate right arrow key press
+    const rightArrowKeyEvent = new KeyboardEvent('keydown', { keyCode: 39 });
+    document.dispatchEvent(rightArrowKeyEvent);
+  };
+
   // Unique ID is present in the URL but not in local storage, render the game and tutorial button
   return (
     <div className="App">
@@ -48,15 +66,15 @@ function App() {
       </div>
 
       <div className="control-buttons-container">
-        <button className='control-button'>
+        <button className='control-button' onClick={handleLeftButtonClick}>
           Left
         </button>
 
-        <button className='control-button'>
+        <button className='control-button' onClick={handleCatchButtonClick}>
           Catch
         </button>
 
-        <button className='control-button'>
+        <button className='control-button' onClick={handleRightButtonClick}>
           Right
         </button>
       </div>
