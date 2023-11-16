@@ -61,7 +61,7 @@ function App() {
     <div className="App">
       <h1 className="centered-heading large-text">SKH Giving Heroes</h1>
       <div className="wrapper">
-        <div>Pick your lucky box!</div>
+        <div>Move the claw and pick your lucky box!</div>
         <Animation />
       </div>
 
