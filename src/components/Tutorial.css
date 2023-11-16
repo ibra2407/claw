@@ -15,16 +15,16 @@
     flex-direction: column;
     opacity: 0;
     /* Initially set opacity to 0 */
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, 50%) scale(1.1);
     /* Initially scale down the component */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.2s ease-in;
     /* Add transition for opacity and transform */
 }
 
 .tutorial-dialog.open {
     opacity: 1;
     /* When the class 'open' is applied, set opacity to 1 */
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1.05);
     /* Scale up the component */
 }
 

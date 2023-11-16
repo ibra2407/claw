@@ -103,7 +103,9 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div className="page-content">
             <img src={tut3} className="tutorial-image" />
             <br></br>
-            Find out where the mystery boxes are to retrieve your hero! If you catch nothing, try another place!
+            Find out where the mystery boxes are to retrieve your hero!
+            <br></br>
+            If you catch nothing, try another place!
           </div>
         )}
 
