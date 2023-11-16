@@ -50,7 +50,13 @@ function App() {
       {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
       {/* Button to open the tutorial */}
       {uniqueID && !showTutorial && (
-        <button className="tutorial-button" onClick={() => setShowTutorial(true)}>
+        <button
+        className={`tutorial-button ${enableSparkle ? 'sparkle' : ''}`}
+        onClick={() => {
+          setShowTutorial(true);
+          setEnableSparkle(false); // Disable sparkle animation after the first click
+        }}
+      >
           Story/Tutorial
         </button>
       )}

@@ -9,7 +9,7 @@ import tut1 from './gameimg/tut1.png'
 import tut2 from './gameimg/tut2.png'
 import tut3 from './gameimg/tut3.png'
 
-const Tutorial = ({ onClose }) => {
+const Tutorial = ({ onClose, enableSparkle }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,7 +41,8 @@ const Tutorial = ({ onClose }) => {
 
   return (
     <div className={`tutorial-dialog ${isOpen ? 'open' : ''}`}>
-      <div className="tutorial-content">
+      <div className={`tutorial-content ${enableSparkle ? 'sparkle' : ''}`}>
+
         {currentPage === 1 && (
           <div className="page-content">
             <img src={hosp1} className="tutorial-image" />
@@ -49,6 +50,7 @@ const Tutorial = ({ onClose }) => {
             {/* P1 */}
           </div>
         )}
+
         {currentPage === 2 && (
           <div className="page-content">
             <img src={hosp2} className="tutorial-image" />
@@ -56,6 +58,7 @@ const Tutorial = ({ onClose }) => {
             {/* P2 */}
           </div>
         )}
+
         {currentPage === 3 && (
           <div className="page-content">
             <img src={hosp3} className="tutorial-image" />
@@ -63,6 +66,7 @@ const Tutorial = ({ onClose }) => {
             {/* P3 */}
           </div>
         )}
+
         {currentPage === 4 && (
           <div className="page-content">
             <img src={hosp4} className="tutorial-image" />
@@ -70,6 +74,7 @@ const Tutorial = ({ onClose }) => {
             {/* P4 */}
           </div>
         )}
+
         {currentPage === 5 && (
           <div className="page-content">
             <img src={hosp5} className="tutorial-image" />
@@ -77,6 +82,7 @@ const Tutorial = ({ onClose }) => {
             {/* P5 */}
           </div>
         )}
+
         {currentPage === 6 && (
           <div className="page-content">
             <img src={tut1} className="tutorial-image" />
@@ -84,6 +90,7 @@ const Tutorial = ({ onClose }) => {
             Move the left and right arrow keys to move the claw.
           </div>
         )}
+
         {currentPage === 7 && (
           <div className="page-content">
             <img src={tut2} className="tutorial-image" />
@@ -91,6 +98,7 @@ const Tutorial = ({ onClose }) => {
             Press the spacebar when you want to pick up a box.
           </div>
         )}
+
         {currentPage === 8 && (
           <div className="page-content">
             <img src={tut3} className="tutorial-image" />
@@ -103,7 +111,11 @@ const Tutorial = ({ onClose }) => {
           {currentPage > 1 && <button className="prev-button" onClick={handlePrevPage}>Prev</button>}
           {currentPage < 8 && <button className="next-button" onClick={handleNextPage}>Next</button>}
         </div>
-        <button className="close-button" onClick={handleClose}>Close</button>
+
+        <button className="close-button" onClick={handleClose}>
+          Close
+        </button>
+
       </div>
     </div>
   );
