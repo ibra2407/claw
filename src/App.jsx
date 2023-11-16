@@ -66,16 +66,16 @@ function App() {
       </div>
 
       <div className="control-buttons-container">
-        <button className='control-button' onClick={handleLeftButtonClick}>
-          Left
+        <button className='control-button' onClick={handleLeftButtonClick} style={{ fontSize: '24px' }}>
+          &larr;
         </button>
 
         <button className='control-button' onClick={handleCatchButtonClick}>
           Catch
         </button>
 
-        <button className='control-button' onClick={handleRightButtonClick}>
-          Right
+        <button className='control-button' onClick={handleRightButtonClick} style={{ fontSize: '24px' }}>
+          &rarr;
         </button>
       </div>
 

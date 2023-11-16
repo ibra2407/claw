@@ -124,13 +124,14 @@ body {
   margin-left: 5%;
   padding: 5px;
   font-size: 18px;
-  background-color: rgb(255, 189, 145);
+  background-color: rgb(255, 200, 97);
+  color: rgb(255, 255, 255);
   border: 2px solid hsl(0, 0%, 0%);
   border-radius: 5px;
 }
 
 .control-button:hover {
-  background-color: #ffc861;
-  color: rgb(255, 255, 255);
+  background-color: rgb(249, 251, 131);
+  color: rgb(0, 0, 0);
   transform: scale(1.1);
 }
