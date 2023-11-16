@@ -87,7 +87,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div className="page-content">
             <img src={tut1} className="tutorial-image" />
             <br></br>
-            Move the left and right arrow keys to move the claw.
+            Move the left and right arrow keys/ click the buttons to move the claw.
           </div>
         )}
 
@@ -95,7 +95,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div className="page-content">
             <img src={tut2} className="tutorial-image" />
             <br></br>
-            Press the spacebar when you want to pick up a box.
+            Press the spacebar/ click the 'catch' button when you want to pick up a box.
           </div>
         )}
 
