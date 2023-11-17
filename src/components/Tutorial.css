@@ -5,8 +5,8 @@
     transform: translate(-50%, -50%);
     width: auto;
     height: auto;
-    background: linear-gradient(to bottom, #ffb672, rgb(255, 180, 180));
-    border: 4px solid black;
+    background: linear-gradient(to bottom, #ffff72, rgb(199, 255, 180));
+    border: 2px solid rgba(0, 0, 0, 0.8);
     box-shadow: 10 10px rgba(0, 0, 0, 0.422);
     border-radius: 20px;
     padding: 10px;
