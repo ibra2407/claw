@@ -16,7 +16,7 @@ function App() {
       <div className="overlay">
         <div>
           <h1 className="centered-heading large-text">
-            Here for SKH GivingHeroes 2024?<br></br> Please get a unique ID from SKH DO!
+            Here for SKH GivingHeroes 2024?<br></br><br></br><br></br><br></br><br></br><br></br><br></br> Please get a unique ID from SKH DO!
           </h1>
         </div>
       </div>
@@ -31,7 +31,8 @@ function App() {
       <div className="overlay">
         <div>
           <h1 className="centered-heading large-text">
-            This token has been used! <br></br> Thanks for donating, Hero!
+            This token has been used! <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            Thanks for donating, Hero!
           </h1>
         </div>
       </div>
