@@ -105,7 +105,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
             <br></br>
             Find out where the mystery boxes are to retrieve your hero!
             <br></br>
-            <span style={{ color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+            <span style={{ color: 'white', textShadow: '2px 2px 8px rgba(0, 0, 0, 0.75)' }}>
               If you catch nothing, try another place!
             </span>
           </div>

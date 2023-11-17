@@ -131,15 +131,14 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
           <div className="content-container">
             <div className="superhero-details">
               <img src={randomSuperhero.image} alt={randomSuperhero.name} />
-              <p>
-                <span style={{ color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', letterSpacing:'3px',fontSize:'20px' }}>
-                {randomSuperhero.name}
+              <div>
+                <span style={{ color: 'black', textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)', letterSpacing:'2px',fontSize:'20px' }}>
+                  {randomSuperhero.name}
                 </span>
-              </p>
-        
-      </div>
-    </div>
-    <div className="email-form-container">
+              </div>
+            </div>
+          </div>
+        <div className="email-form-container">
         <div className="button-container">
           {retries > 0 && (
             <button className="try-again-button" onClick={handleTryAgain}>
