@@ -137,7 +137,7 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
                 </span>
               </div>
             </div>
-          </div>
+        </div>
         <div className="email-form-container">
         <div className="button-container">
           {retries > 0 && (
@@ -145,7 +145,6 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
               You have {retries} {retries === 1 ? 'try' : 'tries'} left!
             </button>)}
         </div>
-        <hr></hr>
       <EmailForm
       UniqueID={UniqueID}
       superheroName={randomSuperhero.name}
