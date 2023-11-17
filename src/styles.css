@@ -34,7 +34,6 @@ body {
   font-size: 60px;
   text-shadow: 10px 10px 20px rgb(0, 0, 0);
   letter-spacing: 2px;
-  margin: 0;
 }
 
 .wrapper {
@@ -48,10 +47,11 @@ body {
 }
 
 .large-text {
-  font-size: 60px;
+  font-size: 40px;
   text-align: center;
-  text-shadow: 10px 10px 20px rgb(0, 0, 0);
-  letter-spacing: 2px;
+  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+  letter-spacing: 4px;
+  margin-bottom: 0;
 }
 
 .tutorial-button {
