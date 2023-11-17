@@ -40,6 +40,12 @@ const Tutorial = ({ onClose, enableSparkle }) => {
 };
 
   return (
+    <>
+    {isOpen && (
+      <div className="modal-overlay">
+      </div>
+    )}
+
     <div className={`tutorial-dialog ${isOpen ? 'open' : ''}`}>
       <div className={`tutorial-content ${enableSparkle ? 'sparkle' : ''}`}>
 
@@ -122,6 +128,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
 
       </div>
     </div>
+    </>
   );
 };
 
