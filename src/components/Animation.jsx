@@ -15,7 +15,6 @@ export const Animation = () => {
   const [showWire, setShowWire] = useState(false);
   const [initialAnimationComplete, setInitialAnimationComplete] = useState(false);
 
-
   // setting initial position of green boxes
   const greenBoxes = [
     { x: 1, y: 5 },
@@ -110,7 +109,6 @@ export const Animation = () => {
     }
   }, [gameCompleted]);
   
-
   // renders the claw
   const clawStyle = {
     left: `${clawPosition.x * clawVisualSize}px`,
@@ -156,7 +154,6 @@ export const Animation = () => {
     }
   }, [initialAnimationComplete]);
   
-
   return (
     <div className="game-container" ref={containerRef}>
       <PaperCutoutOverlay />
