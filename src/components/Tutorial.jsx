@@ -44,7 +44,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
       <div className={`tutorial-content ${enableSparkle ? 'sparkle' : ''}`}>
 
         {currentPage === 1 && (
-          <div className="page-content">
+          <div>
             <img src={hosp1} className="tutorial-image" />
             <br></br>
             {/* P1 */}
@@ -52,7 +52,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
         )}
 
         {currentPage === 2 && (
-          <div className="page-content">
+          <div>
             <img src={hosp2} className="tutorial-image" />
             <br></br>
             {/* P2 */}
@@ -60,7 +60,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
         )}
 
         {currentPage === 3 && (
-          <div className="page-content">
+          <div>
             <img src={hosp3} className="tutorial-image" />
             <br></br>
             {/* P3 */}
@@ -68,7 +68,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
         )}
 
         {currentPage === 4 && (
-          <div className="page-content">
+          <div>
             <img src={hosp4} className="tutorial-image" />
             <br></br>
             {/* P4 */}
@@ -76,7 +76,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
         )}
 
         {currentPage === 5 && (
-          <div className="page-content">
+          <div>
             <img src={hosp5} className="tutorial-image" />
             <br></br>
             {/* P5 */}
@@ -84,7 +84,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
         )}
 
         {currentPage === 6 && (
-          <div className="page-content">
+          <div>
             <img src={tut1} className="tutorial-image" />
             <br></br>
             Move the left and right arrow keys/ click the buttons to move the claw.
@@ -92,7 +92,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
         )}
 
         {currentPage === 7 && (
-          <div className="page-content">
+          <div>
             <img src={tut2} className="tutorial-image" />
             <br></br>
             Press the spacebar/ click the 'catch' button when you want to pick up a box.
@@ -100,7 +100,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
         )}
 
         {currentPage === 8 && (
-          <div className="page-content">
+          <div>
             <img src={tut3} className="tutorial-image" />
             <br></br>
             Find out where the mystery boxes are to retrieve your hero!
