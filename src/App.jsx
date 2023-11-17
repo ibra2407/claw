@@ -77,9 +77,8 @@ function App() {
         <button className='control-button' onClick={handleRightButtonClick} style={{ fontSize: '24px' }}>
           &rarr;
         </button>
-      </div>
 
-      {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
+        {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
       {/* Button to open the tutorial */}
       {uniqueID && !showTutorial && (
         <button
@@ -92,6 +91,8 @@ function App() {
         Story/Tutorial
         </button>
       )}
+      </div>
+
     </div>
   );
 }
