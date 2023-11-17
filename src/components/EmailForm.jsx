@@ -6,18 +6,6 @@ const EmailForm = ({ UniqueID, superheroName, onEmailSent, alreadySent }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-// Email.send({
-//     Host : "smtp.elasticemail.com",
-//     Username : "username",
-//     Password : "password",
-//     To : 'them@website.com',
-//     From : "you@isp.com",
-//     Subject : "This is the subject",
-//     Body : "And this is the body"
-// }).then(
-//   message => alert(message)
-// );
-
     // Your EmailJS service ID, template ID, and Public Key
     const serviceId = 'service_arkp1em';
     const templateId = 'template_tqp2w0f';
@@ -70,3 +58,15 @@ const EmailForm = ({ UniqueID, superheroName, onEmailSent, alreadySent }) => {
 };
 
 export default EmailForm;
+
+// Email.send({
+//     Host : "smtp.elasticemail.com",
+//     Username : "username",
+//     Password : "password",
+//     To : 'them@website.com',
+//     From : "you@isp.com",
+//     Subject : "This is the subject",
+//     Body : "And this is the body"
+// }).then(
+//   message => alert(message)
+// );
