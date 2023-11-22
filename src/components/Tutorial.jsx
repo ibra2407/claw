@@ -8,6 +8,7 @@ import hosp5 from './gameimg/hosp5.png'
 import tut1 from './gameimg/tut1.png'
 import tut2 from './gameimg/tut2.png'
 import tut3 from './gameimg/tut3.png'
+import tut4 from './gameimg/tut4.png'
 
 const Tutorial = ({ onClose, enableSparkle }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -117,9 +118,21 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           </div>
         )}
 
+        {currentPage === 9 && (
+          <div>
+            <img src={tut4} className="tutorial-image" />
+            <br></br>
+            Use Windows+Shift+S to take a screenshot of your hero!
+            <br></br>
+            <span style={{ color: 'white', textShadow: '2px 2px 8px rgba(0, 0, 0, 0.75)' }}>
+              Send your screenshot to Development Office to claim your figurine!
+            </span>
+          </div>
+        )}
+
         <div className="navigation-buttons">
           {currentPage > 1 && <button className="prev-button" onClick={handlePrevPage}>Prev</button>}
-          {currentPage < 8 && <button className="next-button" onClick={handleNextPage}>Next</button>}
+          {currentPage < 9 && <button className="next-button" onClick={handleNextPage}>Next</button>}
         </div>
 
         <button className="close-button" onClick={handleClose}>
