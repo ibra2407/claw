@@ -138,7 +138,9 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
                 </span>
               </div>
               <hr></hr>
-              Remember to take a screenshot!
+              <span style={{ color: 'orange', letterSpacing:'2px',fontSize:'16px' }}>
+                  Remember to take a screenshot!
+                </span>
             </div>
         </div>
         <div className="email-form-container">
