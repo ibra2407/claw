@@ -128,6 +128,7 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
         <div className="dialog-box">
           <ConfettiComponent />
           <p>{message}</p>
+          <hr></hr>
           <div className="content-container">
             <div className="superhero-details">
               <img src={randomSuperhero.image} alt={randomSuperhero.name} />
@@ -136,6 +137,8 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
                   {randomSuperhero.name}
                 </span>
               </div>
+              <hr></hr>
+              Remember to take a screenshot!
             </div>
         </div>
         <div className="email-form-container">
