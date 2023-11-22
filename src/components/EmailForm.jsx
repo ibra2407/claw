@@ -1,37 +1,37 @@
 import React from 'react';
-import smtp from 'smtp-js';
+// import smtp from 'smtp-js';
 
 const EmailForm = ({ UniqueID, superheroName, onEmailSent, alreadySent }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    Email.send({
-      SecureToken : "75960234-ce73-4c16-8cbe-4df7491e3a7a",
-      To : 'muhammad_ibrahim@mymail.sutd.edu.sg',
-      From : "skh-gh-24@skh.com",
-      Subject : `Figurine Request - ${superheroName}`,
-      Body :
-      `Unique ID: ${UniqueID}
-      Figurine: ${superheroName}
-      Thank you for your donation, hero!`,
-    }).then(
-    message => alert(message)
-    );
+    // Email.send({
+    //   SecureToken : "75960234-ce73-4c16-8cbe-4df7491e3a7a",
+    //   To : 'muhammad_ibrahim@mymail.sutd.edu.sg',
+    //   From : "skh-gh-24@skh.com",
+    //   Subject : `Figurine Request - ${superheroName}`,
+    //   Body :
+    //   `Unique ID: ${UniqueID}
+    //   Figurine: ${superheroName}
+    //   Thank you for your donation, hero!`,
+    // }).then(
+    // message => alert(message)
+    // );
 
-    if (!alreadySent) {
-      smtp
-        .send(emailConfig)
-        .then(() => {
-          console.log('Email sent successfully!');
-          alert("You've completed the game! Thank you for your donation!");
-        })
-        .catch((error) => {
-          console.error('Error sending email:', error);
-        });
-    } else {
-      console.log('Email has already been sent with this id!');
-      alert('Token has expired! Thank you for your donation!');
-    }
+    // if (!alreadySent) {
+    //   smtp
+    //     .send(emailConfig)
+    //     .then(() => {
+    //       console.log('Email sent successfully!');
+    //       alert("You've completed the game! Thank you for your donation!");
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error sending email:', error);
+    //     });
+    // } else {
+    //   console.log('Email has already been sent with this id!');
+    //   alert('Token has expired! Thank you for your donation!');
+    // }
     onEmailSent();
   };
 
