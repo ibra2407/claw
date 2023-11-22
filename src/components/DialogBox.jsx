@@ -49,11 +49,11 @@ const superheroProbabilities = {
   Cyclops: 4,
   Flash: 3,
   Hawkeye: 3,
-  Hulk: 2,
+  Hulk: 3,
   Ironman: 1,
   Spiderman: 2,
   Thor: 2,
-  Wolverine: 3,
+  Wolverine: 2,
   Superman: 1
 };
 
