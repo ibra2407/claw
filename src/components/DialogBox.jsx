@@ -43,6 +43,7 @@ const superheroImages = {
   Superman
 };
 
+// the lower the rarer. need not add up to any specific number or value
 const superheroProbabilities = {
   Batman: 1,
   CaptainAmerica: 2,
