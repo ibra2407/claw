@@ -89,7 +89,7 @@ function App() {
           setEnableSparkle(false); // Disable sparkle animation after the first click
         }}
       >
-        Story/Tutorial
+        How To Play
         </button>
       )}
       </div>

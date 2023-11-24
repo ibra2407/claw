@@ -94,7 +94,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut1} className="tutorial-image" />
             <br></br>
-            Move the left and right arrow keys/ click the buttons to move the claw.
+            Move the left and right arrow keys or click the buttons to move the claw.
           </div>
         )}
 
@@ -102,7 +102,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut2} className="tutorial-image" />
             <br></br>
-            Press the spacebar/ click the 'catch' button when you want to pick up a box.
+            Press the spacebar or click the 'catch' button when you want to pick up a box.
           </div>
         )}
 
@@ -113,7 +113,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
             Find out where the mystery boxes are to retrieve your hero!
             <br></br>
             <span style={{ color: 'white', textShadow: '2px 2px 8px rgba(0, 0, 0, 0.75)' }}>
-              If you catch nothing, try another place!
+              If you catch nothing, try moving elsewhere and try again!
             </span>
           </div>
         )}
