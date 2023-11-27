@@ -133,7 +133,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
               </span>
               <br></br>
               <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
-                Send your screenshot to SKH Development Office to claim your figurine! 
+                Email your screenshot to SKH Development Office to claim your figurine!
               </span>   
           </div>
         )}
