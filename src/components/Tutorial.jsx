@@ -118,7 +118,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
                 Find out where the mystery boxes are to retrieve your hero!
               </span>
                 <br></br>
-              <span style={{ color: 'springgreen', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'chartreuse', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 If you catch nothing, try moving the claw elsewhere and try again!
               </span>
           </div>
@@ -132,7 +132,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
                 Use Windows+Shift+S to take a screenshot of your hero!  
               </span>
               <br></br>
-              <span style={{ color: 'springgreen', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'chartreuse', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Send your screenshot to SKH Development Office to claim your figurine! 
               </span>   
           </div>
