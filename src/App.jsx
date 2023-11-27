@@ -60,7 +60,7 @@ function App() {
   // Unique ID is present in the URL but not in local storage, render the game and tutorial button
   return (
     <div className="App">
-      <h1 className="centered-heading large-text">SKH Giving Heroes</h1>
+      <h1 className="centered-heading large-text">SKH Build! Pow! - Brickz for a Cause</h1>
       <div className="wrapper">
         <div>Move the claw and pick your lucky box!</div>
         <Animation />
