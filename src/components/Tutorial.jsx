@@ -119,7 +119,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
               </span>
                 <br></br>
               <span style={{ color: 'springgreen', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
-                If you catch nothing, try moving elsewhere and try again!
+                If you catch nothing, try moving the claw elsewhere and try again!
               </span>
           </div>
         )}
