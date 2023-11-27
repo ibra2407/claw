@@ -16,7 +16,7 @@ function App() {
       <div className="overlay">
         <div>
           <h1 className="centered-heading large-text">
-            Here for SKH GivingHeroes 2024?<br></br><br></br><br></br><br></br><br></br><br></br><br></br> Please get a unique ID from SKH DO!
+            Here for SKH Giving Heroes 2024?<br></br><br></br><br></br><br></br><br></br><br></br><br></br> Please get a unique ID from SKH Development Office!
           </h1>
         </div>
       </div>
