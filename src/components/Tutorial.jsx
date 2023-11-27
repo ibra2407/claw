@@ -94,7 +94,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut1} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'lime', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Move the left and right arrow keys or click the buttons to move the claw.
               </span>
           </div>
@@ -104,7 +104,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut2} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'lime', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Press the spacebar or click the 'catch' button when you want to pick up a box.
               </span>
           </div>
@@ -114,11 +114,11 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut3} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'lime', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Find out where the mystery boxes are to retrieve your hero!
               </span>
                 <br></br>
-              <span style={{ color: 'chartreuse', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 If you catch nothing, try moving the claw elsewhere and try again!
               </span>
           </div>
@@ -128,11 +128,11 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut4} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'lime', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Use Windows+Shift+S to take a screenshot of your hero!  
               </span>
               <br></br>
-              <span style={{ color: 'chartreuse', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Send your screenshot to SKH Development Office to claim your figurine! 
               </span>   
           </div>
