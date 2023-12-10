@@ -14,6 +14,7 @@ export const Animation = () => {
   const [showBox, setShowBox] = useState(false);
   const [showWire, setShowWire] = useState(false);
   const [initialAnimationComplete, setInitialAnimationComplete] = useState(false);
+  const [notificationDisplayed, setNotificationDisplayed] = useState(false);
 
   // setting initial position of green boxes
   const greenBoxes = [
@@ -54,6 +55,11 @@ export const Animation = () => {
           console.log("Claw hit a green box.");
         } else {
           setShowBox(false);
+          // Display notification only if it hasn't been displayed before
+          if (!notificationDisplayed) {
+            setNotificationDisplayed(true);
+            alert("It's okay! Try a different place until you catch a box!");
+          }
         }
 
         // can set end point to smth like when claw reach y=25 and then run anim to act like smth dropped
