@@ -100,6 +100,7 @@ const DialogBoxContent = ({ message, onRetryClick, retries }) => {
   }, [UniqueID]);
 
   const handleEmailSent = () => {
+    alert("Take a screenshot!")
     setEmailSent(true);
     localStorage.setItem(`UniqueID ${UniqueID}`, UniqueID);
   };
