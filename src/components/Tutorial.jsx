@@ -115,7 +115,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
             <img src={tut3} className="tutorial-image" />
             <br></br>
               <span style={{ color: 'aqua', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
-                Find out where the mystery boxes are to retrieve your hero!
+                Find out where the mystery boxes are to retrieve your hero suit!
               </span>
                 <br></br>
               <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
@@ -129,7 +129,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
             <img src={tut4} className="tutorial-image" />
             <br></br>
               <span style={{ color: 'aqua', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
-                Use Windows+Shift+S to take a screenshot of your hero!  
+                Use Windows+Shift+S to take a screenshot of your hero suit!  
               </span>
               <br></br>
               <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
