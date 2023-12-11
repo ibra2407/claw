@@ -58,7 +58,7 @@ export const Animation = () => {
           // Display notification only if it hasn't been displayed before
           if (!notificationDisplayed) {
             setNotificationDisplayed(true);
-            alert("It's okay! Try a different place until you catch a box!");
+            alert("No box there! Try a different place until you catch a box!");
           }
         }
 
