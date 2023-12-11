@@ -94,8 +94,12 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut1} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'aqua', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
-                Move the left and right arrow keys or click the buttons to move the claw.
+              <span style={{ color: 'greenyellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+                Move the left and right arrow keys on your keyboard
+              </span>
+            <br></br>
+              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+                or click the buttons to move the claw.
               </span>
           </div>
         )}
@@ -104,8 +108,12 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut2} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'aqua', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
-                Press the spacebar or click the 'catch' button when you want to pick up a box.
+              <span style={{ color: 'greenyellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+                Press the spacebar
+              </span>
+            <br></br>
+              <span style={{ color: 'yellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+                or click the 'catch' button when you want to pick up a box.
               </span>
           </div>
         )}
@@ -114,7 +122,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut3} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'aqua', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'greenyellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Find out where the mystery boxes are to retrieve your hero suit!
               </span>
                 <br></br>
@@ -128,7 +136,7 @@ const Tutorial = ({ onClose, enableSparkle }) => {
           <div>
             <img src={tut4} className="tutorial-image" />
             <br></br>
-              <span style={{ color: 'aqua', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
+              <span style={{ color: 'greenyellow', textShadow: '1px 1px 8px rgba(0, 0, 0, 1)' }}>
                 Use Windows+Shift+S to take a screenshot of your hero suit!  
               </span>
               <br></br>
